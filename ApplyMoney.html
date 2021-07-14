@@ -1,0 +1,142 @@
+<html>
+<head>
+<style>
+body{
+
+background-image:url(book.jfif);
+background-repeat:no-repeat;
+
+
+
+}
+nav{
+    position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:90px;
+	padding:10px 90px;
+	box-sizing:border-box;
+	background:rgba(0,0,0,0.3);
+	border-bottom:1px solid #fff;
+    z-index:1
+}
+
+
+nav .logo{
+         
+          position:fixed;
+		  top:-6%;
+		   
+
+}
+
+nav ul{
+   list-style:none;
+   flot:right;
+   margin:0;
+   margin-left:40%;
+   padding:0;
+   display:flex;
+   
+}
+ nav ul li a{
+   line-height:80px;
+   color:#fff;
+   padding:12px 30px;
+   text-decoration:none;
+   font-size:14px;
+   font-weight:bold;
+   text-transform:uppercase;
+   
+}
+
+nav ul li a:hover{
+  background:rgba(0,0,0,0.7);
+  border-radius:6px;
+}
+#list {
+   
+  display: none; 
+
+ }
+nav ul #l:hover ul {
+     display:block;
+	 background: #555;
+	 width:105px
+}
+.form{
+  padding:20px;
+  border-radius:10px;
+  background-color:#aed7e6;
+  position:fixed;
+  top:14%;
+  left:40%;
+ 
+  width:20%;
+  box-shadow: 8px 5px 2px grey;
+
+  justify-content: center;
+}
+input{
+  border-radius:10px;
+
+}
+</style>
+<title>Apply Money</title>
+</head>
+<body>
+
+<nav>
+    <div class="logo"><a href="Final1.html"><img src="logo2.png"></a></div>
+	<ul>
+	        <li><a href="Final1.html">Home</a></li>
+			<li id="l"><a href="#">Category</a>
+			<ul id="list">
+		<li><a href="things3.php">Things</a></li>
+        <li><a href="lost2.php">Lost </a></li>
+        <li><a href="found2.php">Found</a></li>
+	
+		   </ul>
+		   </li>
+ </nav>
+ <div class="form">
+<form action="ApplyMoney1.php" method="post">
+   
+             <label> Please fill the form </label><br>
+   
+      FullName<br>
+	  <input type = "text" name = "name">
+	  
+	  <br><br>
+	  
+	   Email<br>
+	  <input type = "email" name = "a">
+         <br><br>
+		 
+	  Mobile no<br>
+	  <input type = "text" name = "m">
+         <br><br>
+
+      Gender<br>
+         <input type = "radio" name = "gen" value = "male"> Male
+	
+         <input type = "radio" name = "gen" value = "female"> Female
+         
+         <br><br>
+	  
+
+        Address<br>
+         <textarea name = "r" rows = "3" cols = "15"> </textarea>
+            <br>
+           <br>
+		   
+		   Amount of money<br>
+	  <input type = "number" name = "amt">
+         <br><br>
+	  <input type = "submit" name="submit">
+        
+	       </form>
+		   </div>
+		   </body>
+		   </html>

@@ -1,0 +1,369 @@
+<html>
+<head>
+<script src="https://kit.fontawesome.com/076c0a07da.js" crossorigin="anonymous"></script>
+
+
+<style>
+*{
+    box-sizing: border-box;
+    font-family:'Lato',sans-serif;
+}
+
+html,body{
+   
+    display:flex;
+    justify-content:center;
+    align-items:center;
+	 
+     width:100%;  
+	 height:100vh;
+	 background-size:cover;
+	 background-position:center;
+
+	 background-image:url(b3.jpg);
+background-repeat: no-repeat;
+z-index:-1;
+}
+
+nav{
+    position:fixed;
+	top:0;
+	left0;
+	width:100%;
+	height:100px;
+	padding:10px 90px;
+	box-sizing:border-box;
+	background:rgba(0,0,0,0.3);
+	border-bottom:1px solid #fff;
+    z-index:1
+}
+
+
+nav .logo{
+         
+          position:fixed;
+		  top:-6%;
+		   
+
+}
+
+nav ul{
+   list-style:none;
+   flot:right;
+   margin:0;
+   margin-left:40%;
+   padding:0;
+   display:flex;
+   
+}
+ 
+ 
+ #list {
+   
+  display: none; 
+
+ }
+nav ul #l:hover ul {
+     display:block;
+	 background: #555;
+	 width:50px
+    
+	 } 
+nav ul li a{
+   line-height:80px;
+   color:#fff;
+   padding:12px 30px;
+   text-decoration:none;
+   font-size:14px;
+   font-weight:bold;
+   text-transform:uppercase;
+   
+}
+
+nav ul li a:hover{
+  background:rgba(0,0,0,0.7);
+  border-radius:6px;
+}
+
+
+	
+	 /* header icon */ 
+	
+	i{
+	
+font-size: 30px;
+    color:white;
+	 transform: translateY(0);
+    z-index: 10000;
+    /* cursor: pointer; */
+    transition: all 1s;
+	transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    animation: bounce 2s infinite;
+	animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: bounce;
+	}
+@keyframes bounce{
+	0%, 20%, 50%, 80%, 100%{
+		transform: translateY(0);
+	} 
+	40%{
+		transform: translateY(0px);
+	}
+	59%{
+		transform: translateY(-10px);
+	}
+	
+}
+
+
+section{
+     width:100%;  
+	 height:100vh;
+	 background-image:url(l.jpg);
+	 background-size:cover;
+	 background-position:center;
+}
+.page{
+    display:flex;
+    width:70%;
+    justify-content:space-around;
+}
+.boxes{
+    width:280px;
+    height:360px;
+    padding:2rem 1rem;
+    background:#fff;
+    position:relative;
+    display:flex;
+    align-items: flex-end;
+    box-shadow:0px 7px 10px rgba(0,0,0,0.5);
+    transition:0.5s ease-in-out;
+}
+.boxes:hover{
+    transform: translateY(20px);
+}
+.boxes:before{
+    content:"";
+    position:absolute;
+    top:0;
+    Left:0;
+    display:block;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,201,61,1));
+    z-index:2;
+    transition:0.5s all;
+    opacity:0;
+}
+.boxes:hover:before{
+    opacity:1;
+}
+.boxes img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:absolute;
+    top:0;
+    Left:0;
+}
+.boxes .info{
+    position:relative;
+
+    z-index:3;
+    color:#fff;
+    opacity:0;
+    transform:translateY(30px);
+    transition:0.5s all;
+}
+.boxes:hover .info{
+opacity:1;
+transform:translate(0px);
+}
+.boxes .info h1{
+    margin:0;
+}
+.boxes .info p{
+    letter-spacing:1px;
+    font-size:15px;
+    margin-top:8px;
+    margin-bottom:20px;
+}
+ .boxes .info .btn{
+    text-decoration:none;
+    padding:0.5rem 1rem;
+    background:#fff;
+    color:#000;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s ease-in-out;
+}
+  .boxes .info .btn:hover{
+     box-shadow:0px 7px 10px rgba(0,0,0,0.5);
+} 
+
+ 
+ 
+ <!-- /*.btn { -->
+  <!-- font-size: 1em; -->
+  <!-- padding: 10px; -->
+  <!-- color: #fff; -->
+  <!-- border: 2px solid #06D85F; -->
+  <!-- border-radius: 20px/50px; -->
+  <!-- text-decoration: none; -->
+  <!-- cursor: pointer; -->
+  <!-- transition: all 0.3s ease-out; -->
+<!-- } -->
+<!-- .btn:hover { -->
+  <!-- background: #06D85F; -->
+<!-- }*/ -->
+.overlay {
+  position: fixed;
+  top:-10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index:1; 
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup .close {
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 90%;
+  overflow: auto;
+}
+@media screen and (max-width: 700px){
+  .info{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+legend{
+  text-align:center;
+}
+marquee{
+
+margin-top:40%;
+
+}
+
+
+</style>
+<link rel = "icon" href = 
+"logo2.png" 
+        type = "image/x-icon">
+<title >Home</title>
+
+</head>
+<body>
+
+<nav>
+    <div class="logo"><a href="Final.html"><img src="logo2.png"></a></div>
+	<ul>
+	        <li><a href="#">Home</a></li>
+			<li id="l"><a href="#">Category</a>
+			<ul id="list">
+		<li><a href="things3.php">Things</a></li>
+        <li><a href="#">Lost </a></li>
+        <li><a href="#">Found </a></li>
+			</ul>
+			
+			
+			</li>
+		   <li><a href="aboutus.html">About us</a></li>
+		   <li><a href="contact.html">Contact</a></li>
+		   <li><a href="register.php"><i class="fas fa-user"></i></a></li>
+		   <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
+		   </ul>
+ </nav>
+
+	
+    <div class="page">
+        <div class="boxes">
+            <img src="books.jpg">
+            <div class="info">
+            <h2>DONATE THINGS & MONEY</h2>
+            <p>Upload the things which you want to donate or if you want to donate money</p>
+            <a href="Things.html" class="btn">Things</a>
+			 <a href="razo.html" class="btn">Money</a>
+          </div>
+			
+        </div>
+	</div>
+	
+	
+     <div class="page">
+        <div class="boxes">
+            <img src="donate.jpg ">
+            <div class="info">
+            <h2>NEED OF MONEY </h2>
+            <p>If someone need the money</p>
+            <a href="ApplyMoney.html" class="btn">Apply for money </a>
+			 
+
+            </div>
+        </div>
+		
+			
+    </div>     
+     <div class="page">
+        <div class="boxes">
+            <img src=" LostandFound.jpg">
+            <div class="info">
+            <h2> Lost And Found</h2>
+            <p> Upload the things which you have found and help someone</p>
+            <a href="lost1.html" class="btn">Lost</a>
+			<a href="found.html" class="btn">Found</a>
+            </div>
+        </div>
+	
+		</div>
+	<br>
+
+
+    <marquee> Share , donate, be HUMBLE...!!
+          Let’s Come together and Lend a Helping hand!!!</marquee>
+   
+	
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+<form>
+   
+             
+   
+      Full Name<br>
+	  <input type = "textbox" name = "name" id="name" placeholder="Enter name"/>
+	  
+	  <br><br>
+	  
+	Amount<br>
+	  <input type = "textbox" name = "amt" id="amt" placeholder="Enter name"/>
+         <br><br>
+		 		 	  <input type = "button" name = "btn" id="btn" value="Pay Now" onclick="pay_now()"/>
+</form>
+
+
+
+
+
+
+<script>
+
+function pay_now(){
+            
+			
+			var name = jQuery('#name').val;
+	 var amt = jQuery('#amt').val;
+
+     var options = {
+    "key": "rzp_test_Z00zdFapGC151t", 
+    "amount": "50000",
+    "currency": "INR",
+    "name": "Acme Corp",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+   
+    "handler": function (response){
+      jQuery.ajax({
+	       type:'post',
+		   url:'payment_process.php',
+		   data:"payment_id="+response.razorpay_payment_id+"&amt="+amt+"&name"+name,
+		   success:function(result){
+		      window.location.herf="index.html";
+		   }
+	  });
+    }
+};
+var rzp1 = new Razorpay(options);
+
+   
+    rzp1.open();
+
+
+	}
+</script>
+
+
+
+
+
+

@@ -1,0 +1,230 @@
+<html>
+<head>
+<style>
+body{
+
+background-image:url(book.jfif);
+background-repeat:no-repeat;
+
+
+
+}
+nav{
+    position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:90px;
+	padding:10px 90px;
+	box-sizing:border-box;
+	background:rgba(0,0,0,0.3);
+	border-bottom:1px solid #fff;
+    z-index:1
+}
+
+
+nav .logo{
+         
+          position:fixed;
+		  top:-6%;
+		   
+
+}
+
+nav ul{
+   list-style:none;
+   flot:right;
+   margin:0;
+   margin-left:40%;
+   padding:0;
+   display:flex;
+   
+}
+ nav ul li a{
+   line-height:80px;
+   color:#fff;
+   padding:12px 30px;
+   text-decoration:none;
+   font-size:14px;
+   font-weight:bold;
+   text-transform:uppercase;
+   
+}
+
+nav ul li a:hover{
+  background:rgba(0,0,0,0.7);
+  border-radius:6px;
+}
+#list {
+   
+  display: none; 
+
+ }
+nav ul #l:hover ul {
+     display:block;
+	 background: #555;
+	 width:105px
+}
+.form{
+  padding:20px;
+  border-radius:10px;
+  background-color:#aed7e6;
+  position:fixed;
+  top:8%;
+  left:40%;
+  box-shadow: 10px 10px 5px grey;
+
+  justify-content: left;
+}
+.center{
+    position: absolute;
+    top: 56%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 365px;
+    height:560px;
+    background:#b6fcfa;
+    border-radius: 10px;
+    box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
+    }
+.center h2{
+    text-align:center;
+   
+    border-bottom:0px solid silver;
+}
+.center form{
+    padding:0 45px;
+    box-sizing: border-box;
+}    
+form .txt_field{
+    position: relative;
+    margin: 5px 0;
+
+}
+.txt_field input{
+    width:100%;
+    height:25px;
+    border:0px;
+    border-radius:10px;
+    border-color:black;
+    outline:none;
+}
+.txt_field textarea{
+    width:100%;
+    border:0px;
+    border-radius:30px;
+    outline:none;
+
+}
+.dept select{
+    width:50%;
+    height:25px;
+    margin :10px 0;
+    border:0px;
+    border-radius:10px;
+    border-color:black;
+    outline:none;
+}
+input[type="file"]{
+    width:65%;
+    height:22px;
+    border:1px solid;
+    background:#0a2261;
+    border-radius:10px;
+    font-size:12px;
+    color:white;
+    cursor:pointer;
+    outline:none;
+}
+
+input[type="submit"]{
+    width:100%;
+    height:25px;
+    margin:25px 0;
+    border:1px solid;
+    background:#2691d9;
+    border-radius:25px;
+    font-size:15px;
+    color:white;
+    cursor:pointer;
+    outline:none;
+}
+input[type="submit"]:hover{
+    border-color:darkblue;
+    transition: .5s;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo"><a href="Final1.html"><img src="logo2.png"></a></div>
+	<ul>
+	        <li><a href="Final1.html">Home</a></li>
+			<li id="l"><a href="#">Category</a>
+			<ul id="list">
+		<li><a href="things3.php">Things</a></li>
+        <li><a href="lost2.php">Lost </a></li>
+        <li><a href="found2.php">Found</a></li>
+	
+		   </ul>
+		   </li>
+ </nav>
+ <div class="center">
+
+<h2>Please Fill The Form</h2>
+<form action="found1.php" method="post" enctype="multipart/form-data">
+    <div class="txt_field">
+     <lable>Full Name :</lable><br>
+     <input type="text" name="name" required>
+     </div>
+     <div class="txt_field">
+    <lable>Email ID :</lable><br>
+    <input type="TEXT" name = "email" required>
+    </div>
+    <div class="txt_field">
+    <lable>Mobile No. :</lable><br>
+    <input type="TEXT" name = "mobile" required>
+     </div>
+	  
+     Gender :<BR>
+     <input type="radio" name="gender" value="GENDER">Male<br>
+     <input type="radio" name="gender" value="GENDER">Female<br>
+     <input type="radio" name="gender" value="GENDER">Others<br>
+    
+	Department :
+   <select name = "department">
+   
+    <option value = "IT"> IT</option>
+    
+    <option value = "CSE"> CSE </option>
+    
+    <option value = "ETC"> ETC </option>
+	
+	 <option value = "MECHANICAL"> MECHANICAL </option>
+    
+    <option value = "ELECTRICAL"> ELECTRICAL</option>
+    
+    <option value = "MBA"> MBA </option>
+    
+    
+   </select>
+            <br>
+	
+    <div class="txt_field">
+   Location of Item:<BR><textarea name = "location" rows="3" cols="30" required></textarea><BR>
+    </div>
+   Upload image:<br>
+     <input type="file" name="image" required>
+     
+     <input type="Submit"  name="submit" value="Submit">
+     
+    
+        </div>
+    </form>
+</div>
+ </body>
+ </html>
